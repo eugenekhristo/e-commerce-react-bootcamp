@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import './collection-item.style.scss';
 
 const CollectionItem = ({ name, imageUrl, price }) => (
@@ -16,4 +17,4 @@ const CollectionItem = ({ name, imageUrl, price }) => (
   </div>
 );
 
-export default CollectionItem;
+export default withRouter(CollectionItem);
