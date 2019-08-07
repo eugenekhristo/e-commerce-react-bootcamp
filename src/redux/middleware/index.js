@@ -1,6 +1,7 @@
-import {applyMiddleware} from 'redux';
-import logger from 'redux-logger';
+import { applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+// import logger from 'redux-logger';
 
-const middlewares = [logger];
+const middlewares = [];
 
-export default applyMiddleware(...middlewares);
+export default composeWithDevTools(applyMiddleware(...middlewares));
