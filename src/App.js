@@ -8,6 +8,7 @@ import Header from './components/header/header.component';
 import HomePage from './pages/home-page/home-page.component';
 import ShopPage from './pages/shop-page/shop-page.component';
 import SignInPage from './pages/sign-in-page/sign-in-page.component';
+import CheckoutPage from './pages/checkout-page/checkout-page.component';
 import { setCurrentUser } from './redux/features/user/user.actions';
 import { selectCurrentUser } from './redux/features/user/user.selectors';
 
@@ -46,6 +47,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/shop" component={ShopPage} />
+          <Route exact path="/checkout" component={CheckoutPage} />
           <Route
             exact
             path="/signin"
