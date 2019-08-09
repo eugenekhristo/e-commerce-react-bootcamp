@@ -29,7 +29,7 @@ const CheckoutPage = ({ cartItems, totalPrice }) => (
     </div>
 
     {cartItems.map(cartItem => (
-      <CheckoutItem cartItem={cartItem} />
+      <CheckoutItem key={cartItem.id} cartItem={cartItem} />
     ))}
 
     <div className="total">total: ${totalPrice}</div>
