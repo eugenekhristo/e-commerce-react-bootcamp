@@ -1,5 +1,5 @@
 import CartActionTypes from './cart.types';
-import { addCartItem } from './cart.utils';
+import { addCartItem, decreaseCartItem } from './cart.utils';
 
 const INITIAL_STATE = {
   cartHidden: true,
@@ -23,6 +23,12 @@ export default (state = INITIAL_STATE, action) => {
         cartItems: state.cartItems.filter(
           cartItem => cartItem.id !== action.payload.id
         )
+      };
+
+    case CartActionTypes.DECREASE_CART_ITEM:
+      return {
+        ...state,
+        cartItems: decreaseCartItem(state.cartItems, action.payload)
       };
 
     default:
