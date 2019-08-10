@@ -1,4 +1,4 @@
-const SHOP_COLLECTIONS = [
+export default [
   {
     id: 1,
     title: 'Hats',
@@ -245,5 +245,3 @@ const SHOP_COLLECTIONS = [
     ]
   }
 ];
-
-export default SHOP_COLLECTIONS;
